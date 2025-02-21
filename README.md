@@ -20,17 +20,17 @@ A Chrome extension that automatically renames browser tabs containing academic p
 
 ## Installation
 
-### From Chrome Web Store
-1. Visit the [Chrome Web Store page](#) (link coming soon)
-2. Click "Add to Chrome"
-3. Confirm the installation
-
 ### Manual Installation (Developer Mode)
 1. Download or clone this repository
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode" in the top right
 4. Click "Load unpacked" and select the `dist` folder from this repository
 5. The extension icon should appear in your Chrome toolbar
+
+### From Chrome Web Store **[Still WIP]**
+1. Visit the [Chrome Web Store page](#) (link coming soon)
+2. Click "Add to Chrome"
+3. Confirm the installation
 
 ## Usage
 
