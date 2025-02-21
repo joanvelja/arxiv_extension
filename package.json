@@ -2,8 +2,12 @@
   "name": "arxiv-tab-renamer",
   "version": "1.0.0",
   "description": "Chrome extension to rename paper tabs with their actual titles",
+  "engines": {
+    "node": ">=14.15.0"
+  },
   "scripts": {
-    "build": "npm run generate-icons && webpack --config webpack.config.js",
+    "build": "npm run generate-icons || true && webpack --config webpack.config.js",
+    "build:no-icons": "webpack --config webpack.config.js",
     "dev": "webpack --config webpack.config.js --watch",
     "type-check": "tsc --noEmit",
     "lint": "eslint src/**/*.ts",

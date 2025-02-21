@@ -58,18 +58,22 @@ This extension is designed with privacy and security in mind:
 ## Development
 
 ### Prerequisites
-- Node.js (v14 or higher)
+- Node.js (version 14.15.0 or higher)
 - npm
 
 ### Setup
 ```bash
+# Check your Node version first
+node --version  # Should be >=14.15.0
+
 # Install dependencies
 npm install
 
-# Build the extension
+# Build the extension (with icon generation)
 npm run build
 
-# NOTE: The above command will create the dist folder that you need to add to Chrome Extensions!
+# If you have Node.js <14.15.0 or icon generation fails:
+npm run build:no-icons
 
 # Development with watch mode
 npm run dev
