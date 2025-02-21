@@ -61,6 +61,14 @@ This extension is designed with privacy and security in mind:
 - Node.js (version 14.15.0 or higher)
 - npm
 
+#### Ubuntu/Debian Additional Requirements
+If you're on Ubuntu or Debian, you'll need to install some additional dependencies for the image processing:
+```bash
+# Install required system libraries for sharp
+sudo apt-get update
+sudo apt-get install -y build-essential libvips-dev
+```
+
 ### Setup
 ```bash
 # Check your Node version first
@@ -72,7 +80,7 @@ npm install
 # Build the extension (with icon generation)
 npm run build
 
-# If you have Node.js <14.15.0 or icon generation fails:
+# If you're having issues with sharp/icon generation:
 npm run build:no-icons
 
 # Development with watch mode
@@ -87,6 +95,11 @@ npm run type-check
 # Linting
 npm run lint
 ```
+
+If you encounter any `sharp`-related errors:
+1. Try installing the system dependencies (Ubuntu/Debian) as shown above
+2. If issues persist, use `npm run build:no-icons` instead
+3. For other Linux distributions, check [sharp's installation guide](https://sharp.pixelplumbing.com/install)
 
 ### Project Structure
 ```
