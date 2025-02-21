@@ -24,7 +24,7 @@ A Chrome extension that automatically renames browser tabs containing academic p
 1. Download or clone this repository
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the `dist` folder from this repository
+4. Click "Load unpacked" and select the `dist` folder from this repository (see instructions on how to create `dist` below at **Setup**)
 5. The extension icon should appear in your Chrome toolbar
 
 ### From Chrome Web Store **[Still WIP]**
@@ -68,6 +68,8 @@ npm install
 
 # Build the extension
 npm run build
+
+# NOTE: The above command will create the dist folder that you need to add to Chrome Extensions!
 
 # Development with watch mode
 npm run dev
