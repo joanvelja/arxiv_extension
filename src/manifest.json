@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Academic Paper Tab Renamer",
+  "version": "1.0.0",
+  "description": "Automatically renames browser tabs containing academic papers to their actual titles",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.arxiv.org/*",
+    "*://*.openreview.net/*",
+    "*://*.semanticscholar.org/*",
+    "*://*.acm.org/*/pdf/*",
+    "*://*.ieee.org/*/document/*",
+    "*://*.springer.com/*/pdf/*",
+    "*://*.sciencedirect.com/*/pdf/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.arxiv.org/*",
+        "*://*.openreview.net/*",
+        "*://*.semanticscholar.org/*",
+        "*://*.acm.org/*/pdf/*",
+        "*://*.ieee.org/*/document/*",
+        "*://*.springer.com/*/pdf/*",
+        "*://*.sciencedirect.com/*/pdf/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    },
+    "default_title": "Paper Tab Renamer",
+    "default_popup": "popup.html"
+  },
+  "minimum_chrome_version": "88",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "author": "Joan Velja",
+  "homepage_url": "https://github.com/joanvelja/arxiv_extension"
+} 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 16px;
+      margin: 0 0 16px 0;
+      color: #1a73e8;
+    }
+    
+    .status {
+      padding: 12px;
+      border-radius: 8px;
+      background: #f1f3f4;
+      margin-bottom: 16px;
+    }
+    
+    .status.active {
+      background: #e6f4ea;
+      color: #137333;
+    }
+    
+    .status.error {
+      background: #fce8e6;
+      color: #c5221f;
+    }
+    
+    .stats {
+      font-size: 14px;
+      color: #5f6368;
+    }
+    
+    button {
+      width: 100%;
+      padding: 8px;
+      background: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 16px;
+    }
+    
+    button:hover {
+      background: #1557b0;
+    }
+    
+    button:disabled {
+      background: #dadce0;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Academic Paper Tab Renamer</h1>
+  
+  <div id="status" class="status">
+    Checking status...
+  </div>
+  
+  <div class="stats">
+    <div>Tabs renamed: <span id="renamedCount">-</span></div>
+    <div>Cache entries: <span id="cacheCount">-</span></div>
+  </div>
+  
+  <button id="clearCache">Clear Cache</button>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
