@@ -37,4 +37,12 @@ temp/
 # Personal configuration files
 .npmrc
 .yarnrc
-.eslintcache 
+.eslintcache
+
+# Confidential files
+planning/
+docs/planning/
+**/planning/
+**/*planning*
+**/*.plan
+**/*.planning 
